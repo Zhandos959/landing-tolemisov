@@ -26,3 +26,8 @@
 
 ## Development notes
 Project structure prepared for the course requirements.
+
+## Submission checklist
+- [ ] Public GitHub repository
+- [ ] GitHub Pages (where required)
+- [ ] Real screenshots added
