@@ -23,3 +23,6 @@
 
 ## GitHub Pages
 `https://<username>.github.io/landing-tolemisov/`
+
+## Development notes
+Project structure prepared for the course requirements.
