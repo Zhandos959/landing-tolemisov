@@ -20,6 +20,7 @@
       <nav class="nav" aria-label="Основная навигация">
         <a href="#about">О клубе</a>
         <a href="#tariffs">Тарифы</a>
+        <a href="#library">Игровая библиотека</a>
         <a href="#advantages">Преимущества</a>
         <a href="#contacts">Контакты</a>
       </nav>
@@ -102,6 +103,36 @@
       </div>
     </section>
 
+    <section class="section library" id="library" aria-labelledby="library-title">
+      <div class="container">
+        <div class="section-heading library-heading">
+          <div><p class="eyebrow">03 · NEXUS GAME ARCHIVE</p><h2 id="library-title">Играй умнее.<br><span>Открой новые миры.</span></h2></div>
+          <p class="muted">Книги о видеоиграх, игровых мирах и разработке — подборка для игроков NEXUS.</p>
+        </div>
+        <form class="library-search" id="library-search-form" role="search">
+          <label for="library-query">ПОИСК В ИГРОВОМ АРХИВЕ</label>
+          <div class="library-search-row"><span aria-hidden="true">⌕</span><input id="library-query" name="q" type="search" value="video games" placeholder="Например, game design" required><button class="btn" type="submit">Найти <span aria-hidden="true">↗</span></button></div>
+          <p>Каждый поиск отправляет новый запрос к Open Library.</p>
+        </form>
+        <p class="library-status" id="library-status" role="status" aria-live="polite"></p>
+        <div class="library-grid" id="library-results" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section club-picks" aria-labelledby="picks-title">
+      <div class="container">
+        <div class="section-heading library-heading">
+          <div><p class="eyebrow">04 · ВЫБОР NEXUS</p><h2 id="picks-title">Две подборки.<br><span>Один запрос.</span></h2></div>
+          <p class="muted">Загружаем два независимых списка одновременно с помощью Promise.all.</p>
+        </div>
+        <p class="library-status" id="picks-status" role="status" aria-live="polite">Подборки ещё не загружены.</p>
+        <div class="picks-grid">
+          <div><h3 class="picks-label">01 / GAME DESIGN</h3><div class="picks-list" id="design-picks"></div></div>
+          <div><h3 class="picks-label">02 / VIDEO GAMES</h3><div class="picks-list" id="games-picks"></div></div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="booking" aria-labelledby="booking-title">
       <div class="container booking-grid">
         <div>
@@ -127,5 +158,11 @@
       <div><strong>Часы работы</strong><p>24/7<br>Без выходных</p></div>
     </div>
   </footer>
+  <dialog class="book-dialog" id="book-dialog" aria-labelledby="book-dialog-title">
+    <button class="dialog-close" id="dialog-close" type="button" aria-label="Закрыть подробности">×</button>
+    <p class="eyebrow">NEXUS GAME ARCHIVE / DETAILS</p>
+    <div id="book-details"><p class="muted">Выберите книгу, чтобы загрузить подробности.</p></div>
+  </dialog>
+  <script src="app.js" defer></script>
 </body>
 </html>
